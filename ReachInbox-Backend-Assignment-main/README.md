@@ -8,7 +8,7 @@ The app seamlessly integrates with **Reachinbox APIs** to fetch and manage real-
 
 ## ✨ Features
 
-**📂 Sidebar Navigation** – Quick access to various app sections.  
+- **📂 Sidebar Navigation** – Quick access to various app sections.  
 - **🧭 TopBar** – Displays current workspace and includes a theme toggle.  
 - **📧 Main Page** – Lists email threads and shows detailed views of selected emails.  
 - **🧑‍💼 Right Section** – Displays lead details and activity history.  
@@ -44,9 +44,9 @@ The application will be available at http://localhost:5173
 ## 🔗 API Endpoints
 # List Email Threads
 
-- **Endpoint: GET /api/v1/onebox/list
-- **Description: Retrieves a list of email threads.
-- *Headers:
+- **Endpoint:** GET /api/v1/onebox/list
+- **Description:** Retrieves a list of email threads.
+- *Headers:*
 
 - **Authorization: Bearer <token>
 
