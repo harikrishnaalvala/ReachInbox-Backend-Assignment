@@ -26,22 +26,22 @@ The app seamlessly integrates with **Reachinbox APIs** to fetch and manage real-
 git clone https://github.com/saqlainkaleem/reachinbox.git
 
 
-# Navigate to the Project Directory
+### Navigate to the Project Directory
 
 cd reachinbox
 
-## Install Dependencies
+### Install Dependencies
 
 npm install
 
-## Start the Development Server
+### Start the Development Server
 
 npm run dev
 
 
 The application will be available at http://localhost:5173
 
-## 🔗 API Endpoints
+### 🔗 API Endpoints
 # List Email Threads
 
 - **Endpoint:** GET /api/v1/onebox/list
@@ -68,7 +68,7 @@ The application will be available at http://localhost:5173
   "body": "Body of the email"
 }
 
-## Reset Email Data
+### Reset Email Data
 
 - **Endpoint: GET /api/v1/onebox/reset
 - **Description: Resets the email data (useful for testing).
@@ -76,7 +76,7 @@ The application will be available at http://localhost:5173
 
 - **Authorization: Bearer <token>
 
-## 🧩 Components
+### 🧩 Components
 # SideBar
 
 - ** Description: Fixed sidebar for navigation with section icons (Home, Mail, Search).
@@ -141,7 +141,7 @@ The application will be available at http://localhost:5173
 
 - *Props:
 
-- **onCancel(Function) – Cancel action handler.
+- **onCancel(Function)** – Cancel action handler.
 
 - **onDelete(Function) – Confirm deletion handler.
 
