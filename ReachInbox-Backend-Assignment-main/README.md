@@ -8,7 +8,7 @@ The app seamlessly integrates with **Reachinbox APIs** to fetch and manage real-
 
 ## ✨ Features
 
-- **📂 Sidebar Navigation** – Quick access to various app sections.  
+**📂 Sidebar Navigation** – Quick access to various app sections.  
 - **🧭 TopBar** – Displays current workspace and includes a theme toggle.  
 - **📧 Main Page** – Lists email threads and shows detailed views of selected emails.  
 - **🧑‍💼 Right Section** – Displays lead details and activity history.  
