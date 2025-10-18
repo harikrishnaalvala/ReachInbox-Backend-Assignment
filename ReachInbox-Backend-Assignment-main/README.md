@@ -1,14 +1,14 @@
 
-# 📬 Reachinbox Web Application
+#  Reachinbox Web Application
 
-## 🚀 Overview
+##  Overview
 The **Reachinbox Web Application** is a powerful and user-friendly email management platform.  
 It allows users to manage email threads, view detailed messages, compose replies, and toggle between light and dark themes.  
 The app integrates seamlessly with **Reachinbox APIs** to fetch and manage email data in real time.
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -37,9 +37,9 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-## 🔗 API Endpoints
+##  API Endpoints
 
-### 📨 List Email Threads
+###  List Email Threads
 
 * **Endpoint:** `GET /api/v1/onebox/list`
 * **Description:** Retrieves a list of email threads.
@@ -51,7 +51,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### ✉️ Reply to an Email Thread
+###  Reply to an Email Thread
 
 * **Endpoint:** `POST /api/v1/onebox/reply/{threadId}`
 * **Description:** Sends a reply to the specified email thread.
@@ -73,7 +73,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 🔁 Reset Email Data
+###  Reset Email Data
 
 * **Endpoint:** `GET /api/v1/onebox/reset`
 * **Description:** Resets the email data (useful for testing).
@@ -85,9 +85,9 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-## 🧩 Components
+##  Components
 
-### 🧭 SideBar
+###  SideBar
 
 * **Description:** Fixed sidebar for navigation with section icons (Home, Mail, Search).
 * **Props:**
@@ -99,7 +99,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 🔝 TopBar
+###  TopBar
 
 * **Description:** Displays the app title and workspace name. Includes a theme toggle.
 * **Features:**
@@ -108,7 +108,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 🖥️ MainPage
+###  MainPage
 
 * **Description:** Core area showing email threads, selected thread details, and extra info.
 * **State:**
@@ -119,7 +119,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 🧑‍💼 RightSection
+###  RightSection
 
 * **Description:** Displays lead details and activities related to the selected email thread.
 * **Features:**
@@ -129,7 +129,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 📭 SubView
+###  SubView
 
 * **Description:** Placeholder shown when no emails are available.
 * **Features:**
@@ -138,7 +138,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 📝 CustomMail
+###  CustomMail
 
 * **Description:** Compose and send replies to existing email threads.
 * **State:**
@@ -147,7 +147,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 🗑️ DeletePopUp
+###  DeletePopUp
 
 * **Description:** Popup for confirming email deletion.
 * **Props:**
@@ -157,7 +157,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-### 🌗 ThemeToggle
+###  ThemeToggle
 
 * **Description:** Toggles between dark and light themes.
 * **State:**
@@ -166,7 +166,7 @@ The application will be available at **[http://localhost:5173](http://localhost:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:** React + Vite
 * **Language:** TypeScript
