@@ -1,21 +1,10 @@
+
 # 📬 Reachinbox Web Application
 
 ## 🚀 Overview
-The **Reachinbox Web Application** is a powerful email management platform built with a user-friendly interface. It enables users to efficiently manage their emails, view detailed threads, compose replies, and toggle between light and dark themes.  
-The app seamlessly integrates with **Reachinbox APIs** to fetch and manage real-time email data.
-
----
-
-## ✨ Features
-
-- **📂 Sidebar Navigation** – Quick access to various app sections.  
-- **🧭 TopBar** – Displays current workspace and includes a theme toggle.  
-- **📧 Main Page** – Lists email threads and shows detailed views of selected emails.  
-- **🧑‍💼 Right Section** – Displays lead details and activity history.  
-- **🪄 SubView** – Placeholder screen when there are no emails.  
-- **✉️ Custom Mail** – Allows composing and sending replies.  
-- **🗑️ Delete PopUp** – Confirmation before deleting an email.  
-- **🌗 Theme Toggle** – Switch between Dark and Light mode.
+The **Reachinbox Web Application** is a powerful and user-friendly email management platform.  
+It allows users to manage email threads, view detailed messages, compose replies, and toggle between light and dark themes.  
+The app integrates seamlessly with **Reachinbox APIs** to fetch and manage email data in real time.
 
 ---
 
@@ -23,144 +12,171 @@ The app seamlessly integrates with **Reachinbox APIs** to fetch and manage real-
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/saqlainkaleem/reachinbox.git
+git clone https://github.com/harikrishnaalvala/ReachInbox-Backend-Assignment.git
+````
 
+### 2. Navigate to the Project Directory
 
-### Navigate to the Project Directory
-
+```bash
 cd reachinbox
+```
 
-### Install Dependencies
+### 3. Install Dependencies
 
+```bash
 npm install
+```
 
-### Start the Development Server
+### 4. Start the Development Server
 
+```bash
 npm run dev
+```
 
+The application will be available at **[http://localhost:5173](http://localhost:5173)**
 
-The application will be available at http://localhost:5173
+---
 
-### 🔗 API Endpoints
-# List Email Threads
+## 🔗 API Endpoints
 
-- **Endpoint:** GET /api/v1/onebox/list
-- **Description:** Retrieves a list of email threads.
-- *Headers:*
+### 📨 List Email Threads
 
-- **Authorization: Bearer <token>
+* **Endpoint:** `GET /api/v1/onebox/list`
+* **Description:** Retrieves a list of email threads.
+* **Headers:**
 
-# Reply to an Email Thread
+  ```
+  Authorization: Bearer <token>
+  ```
 
-- **Endpoint: POST /api/v1/onebox/reply/{threadId}
-- **Description: Sends a reply to the specified email thread.
-- *Headers:
+---
 
-- **Authorization: Bearer <token>
+### ✉️ Reply to an Email Thread
 
+* **Endpoint:** `POST /api/v1/onebox/reply/{threadId}`
+* **Description:** Sends a reply to the specified email thread.
+* **Headers:**
 
-- **Request Body:
+  ```
+  Authorization: Bearer <token>
+  ```
+* **Request Body:**
 
-{
-  "to": "recipient@example.com",
-  "from": "sender@example.com",
-  "subject": "Subject of the email",
-  "body": "Body of the email"
-}
+  ```json
+  {
+    "to": "recipient@example.com",
+    "from": "sender@example.com",
+    "subject": "Subject of the email",
+    "body": "Body of the email"
+  }
+  ```
 
-### Reset Email Data
+---
 
-- **Endpoint: GET /api/v1/onebox/reset
-- **Description: Resets the email data (useful for testing).
-- *Headers:
+### 🔁 Reset Email Data
 
-- **Authorization: Bearer <token>
+* **Endpoint:** `GET /api/v1/onebox/reset`
+* **Description:** Resets the email data (useful for testing).
+* **Headers:**
 
-### 🧩 Components
-# SideBar
+  ```
+  Authorization: Bearer <token>
+  ```
 
-- ** Description: Fixed sidebar for navigation with section icons (Home, Mail, Search).
+---
 
-- *Props:
+## 🧩 Components
 
-- **onMenuItemClick(Function) – Handles menu item click events.
+### 🧭 SideBar
 
-- *State:
+* **Description:** Fixed sidebar for navigation with section icons (Home, Mail, Search).
+* **Props:**
 
-- **selectedItem – Tracks currently selected menu item.
+  * `onMenuItemClick(Function)` – Handles menu item click events.
+* **State:**
 
-# TopBar
+  * `selectedItem` – Tracks currently selected menu item.
 
-- **Description: Displays app title and workspace name, includes a theme toggle.
+---
 
-- *Features:
+### 🔝 TopBar
 
-- **Dark/Light mode toggle.
+* **Description:** Displays the app title and workspace name. Includes a theme toggle.
+* **Features:**
 
-# MainPage
+  * Dark/Light mode toggle.
 
-- **Description: Core area with email threads, selected thread details, and extra info.
+---
 
-- *State:
+### 🖥️ MainPage
 
-- **datas – List of fetched email threads.
+* **Description:** Core area showing email threads, selected thread details, and extra info.
+* **State:**
 
-- **loading – Loading status indicator.
+  * `datas` – List of fetched email threads.
+  * `loading` – Loading status indicator.
+  * `selectedThread` – Currently viewed email thread.
 
-- **selectedThread – Currently viewed email thread.
+---
 
-# RightSection
+### 🧑‍💼 RightSection
 
-- **Description: Displays lead details and activities related to the selected email.
+* **Description:** Displays lead details and activities related to the selected email thread.
+* **Features:**
 
-- *Features:
+  * Lead info (name, email, LinkedIn).
+  * Recent email activity timeline.
 
-- **Lead info (name, email, LinkedIn).
+---
 
-- **Recent email activity timeline.
+### 📭 SubView
 
-# SubView
+* **Description:** Placeholder shown when no emails are available.
+* **Features:**
 
-- **Description: Placeholder shown when no emails are available.
+  * Displays an image and “No Emails” text.
 
-- *Features:
+---
 
-- **Displays an image and “No Emails” text.
+### 📝 CustomMail
 
-# CustomMail
+* **Description:** Compose and send replies to existing email threads.
+* **State:**
 
-- **Description: Compose and send replies to existing email threads.
+  * `replyData` – Contains `to`, `from`, `subject`, and `body` fields.
 
-- *State:
+---
 
-- **replyData – Contains to, from, subject, body fields.
+### 🗑️ DeletePopUp
 
-# DeletePopUp
+* **Description:** Popup for confirming email deletion.
+* **Props:**
 
-- **Description: Popup for confirming email deletion.
+  * `onCancel(Function)` – Cancel action handler.
+  * `onDelete(Function)` – Confirm deletion handler.
 
-- *Props:
+---
 
-- **onCancel(Function)** – Cancel action handler.
+### 🌗 ThemeToggle
 
-- **onDelete(Function) – Confirm deletion handler.
+* **Description:** Toggles between dark and light themes.
+* **State:**
 
-# ThemeToggle
+  * `darkMode (Boolean)` – Current theme mode.
 
-- **Description: Toggles between dark and light themes.
-
-- *State:
-
-- **darkMode (Boolean) – Current theme mode.
+---
 
 ## 🛠️ Tech Stack
 
-- **Frontend: React + Vite
+* **Frontend:** React + Vite
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **API Integration:** Reachinbox REST APIs
+* **State Management:** React Hooks / Context API
 
-- **Language: TypeScript
+---
 
-- **Styling: Tailwind CSS
 
-- **API Integration: Reachinbox REST APIs
 
-- **State Management: React Hooks / Context API
+Would you like me to **add badges** (for Node.js, TypeScript, React, License, etc.) and a **screenshot section** to make your README look more polished and professional on GitHub?
+```
